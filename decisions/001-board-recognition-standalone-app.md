@@ -37,6 +37,7 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 - [x] 從 go-solution 提取 board_recognition.dart 核心邏輯 → `packages/core/`
 - [x] 建立 Android app 骨架，支援拍照 + 相簿 + debug overlay → `apps/android/`
 - [x] Debug APK build 驗證通過（2026-03-26）
+- [x] GitHub Actions CI + Release workflow（push tag → build APK → pre-release）
 - [ ] 在手機上實測辨識效果
 - [ ] 根據 debug overlay 調整辨識參數
 - [ ] go-solution 改為依賴 go_board_core，消除重複
