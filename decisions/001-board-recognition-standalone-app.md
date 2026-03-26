@@ -29,10 +29,14 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 
 ## 決定
 
-傾向選項 B，但待確認。
+選項 B：獨立 monorepo（`justmaker/go-board-recognition`）+ 獨立 Android 驗證 app。
 
 ## 後續行動
 
-- [ ] 確認 repo 結構（見 DEC-002 monorepo 策略）
-- [ ] 從 go-solution 提取 board_recognition.dart 核心邏輯
-- [ ] 建立 Android app 骨架，支援拍照 + 相簿 + debug overlay
+- [x] 確認 repo 結構（見 DEC-002 monorepo 策略）
+- [x] 從 go-solution 提取 board_recognition.dart 核心邏輯 → `packages/core/`
+- [x] 建立 Android app 骨架，支援拍照 + 相簿 + debug overlay → `apps/android/`
+- [x] Debug APK build 驗證通過（2026-03-26）
+- [ ] 在手機上實測辨識效果
+- [ ] 根據 debug overlay 調整辨識參數
+- [ ] go-solution 改為依賴 go_board_core，消除重複
