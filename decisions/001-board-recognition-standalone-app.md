@@ -56,3 +56,18 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 | v0.1.0-alpha.4 | 2026-03-26 | 修復局部盤面格線過度延伸 + 邊緣假黑子 |
 | v0.1.0-alpha.5 | 2026-03-26 | 降低白子門檻（過渡版本） |
 | v0.1.0-alpha.6 | 2026-03-26 | 棋子偵測改用 Otsu + stdV 主導分類，零硬編碼閾值 |
+| v0.1.0-alpha.7 | 2026-03-26 | 棋子偵測改用 V 距離為主、stdV 為輔 |
+| v0.1.0-hc.1 | 2026-03-26 | HoughCircles 幾何圓形偵測（實驗分支） |
+| v0.1.0-hybrid.1 | 2026-03-26 | HoughCircles 定位 + V-distance 分類混合策略 |
+| v0.1.0-haar.1 | 2026-03-26 | watchGo Haar Cascade 預訓練分類器 |
+| v0.1.0-mc.1 | 2026-03-26 | 手動修正 UI — 點擊修正棋子 |
+
+## 方案對照表
+
+| 版本代號 | Branch | 方法 | 分類 | 說明 |
+|----------|--------|------|------|------|
+| alpha.7 | `main` | V-distance + stdV | 傳統 CV | 以 \|V - boardV\| 為主要信號，Otsu 自適應閾值 |
+| hc.1 | `feat/hough-circles` | HoughCircles | 傳統 CV | 幾何圓形偵測找棋子位置，灰度值分類黑白 |
+| hybrid.1 | `feat/hybrid` | HoughCircles + V-distance | 傳統 CV | 結合圓形偵測定位與色彩距離分類，交叉驗證 |
+| haar.1 | `feat/haar-cascade` | Haar Cascade | 古典 ML | watchGo 預訓練 XML（黑子/白子/空點分類器） |
+| mc.1 | `feat/manual-correction` | 手動修正 UI | 人機協作 | 辨識後讓使用者點擊修正錯誤棋子 |
