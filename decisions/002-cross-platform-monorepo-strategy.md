@@ -1,6 +1,7 @@
 # DEC-002: 跨平台 Monorepo 策略
 
-- **狀態**: 討論中
+- **狀態**: 已決定 — 選項 B（melos monorepo + 共享 core）
+- **決定日期**: 2026-03-26
 - **日期**: 2026-03-26
 - **相關 repo**: justmaker/go-solution
 - **參與者**: Rex, Kael
