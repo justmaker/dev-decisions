@@ -61,6 +61,9 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 | v0.1.0-hybrid.1 | 2026-03-26 | HoughCircles 定位 + V-distance 分類混合策略 |
 | v0.1.0-haar.1 | 2026-03-26 | watchGo Haar Cascade 預訓練分類器 |
 | v0.1.0-mc.1 | 2026-03-26 | 手動修正 UI — 點擊修正棋子 |
+| v0.1.0-sgf.1 | 2026-03-26 | SGF 匯出 — 辨識結果分享為 SGF 檔 |
+| v0.1.0-cam.1 | 2026-03-26 | 相機即時預覽 — 格線 overlay + 拍照 |
+| v0.1.0-hist.1 | 2026-03-26 | 歷史紀錄 — 自動存檔 + 回顧瀏覽 |
 
 ## 方案對照表
 
@@ -71,3 +74,6 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 | hybrid.1 | `feat/hybrid` | HoughCircles + V-distance | 傳統 CV | 結合圓形偵測定位與色彩距離分類，交叉驗證 |
 | haar.1 | `feat/haar-cascade` | Haar Cascade | 古典 ML | watchGo 預訓練 XML（黑子/白子/空點分類器） |
 | mc.1 | `feat/manual-correction` | 手動修正 UI | 人機協作 | 辨識後讓使用者點擊修正錯誤棋子 |
+| sgf.1 | `feat/sgf-export` | SGF 匯出 | 功能擴展 | 辨識結果匯出為 SGF 檔，可分享至圍棋軟體 |
+| cam.1 | `feat/camera-preview` | 相機即時預覽 | 功能擴展 | 拍照前顯示格線 overlay，支援 9/13/19 路切換 |
+| hist.1 | `feat/history` | 歷史紀錄 | 功能擴展 | 自動儲存辨識紀錄，支援回顧與刪除 |
