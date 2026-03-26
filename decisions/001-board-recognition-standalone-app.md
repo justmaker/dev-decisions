@@ -38,6 +38,21 @@ go-solution 中的棋盤辨識（`board_recognition.dart`，1146 行）精準度
 - [x] 建立 Android app 骨架，支援拍照 + 相簿 + debug overlay → `apps/android/`
 - [x] Debug APK build 驗證通過（2026-03-26）
 - [x] GitHub Actions CI + Release workflow（push tag → build APK → pre-release）
-- [ ] 在手機上實測辨識效果
-- [ ] 根據 debug overlay 調整辨識參數
+- [x] 白子偵測修復 — 螢幕拍照低對比度（alpha.2）
+- [x] 局部盤面自動偵測 — 邊緣留白分析判斷裁切邊 vs 真實棋盤邊（alpha.3）
+- [x] 格線裁切修復 — 局部盤面只保留有偵測證據的格線範圍（alpha.4）
+- [x] 棋子偵測重構 — 移除硬編碼閾值，改用 Otsu + stdV 自適應分類（alpha.6）
+- [ ] 手機實測 Otsu 演算法效果
 - [ ] go-solution 改為依賴 go_board_core，消除重複
+- [ ] 下階段規劃（見 DEC-003）
+
+## 進度記錄
+
+| 版本 | 日期 | 變更 |
+|------|------|------|
+| v0.1.0-alpha.1 | 2026-03-26 | 初始版本：完整辨識 pipeline + debug overlay |
+| v0.1.0-alpha.2 | 2026-03-26 | 修復螢幕拍照白子偵測（V range adaptive scaling） |
+| v0.1.0-alpha.3 | 2026-03-26 | 支援局部盤面（邊緣留白分析 + rows/cols 非正方形） |
+| v0.1.0-alpha.4 | 2026-03-26 | 修復局部盤面格線過度延伸 + 邊緣假黑子 |
+| v0.1.0-alpha.5 | 2026-03-26 | 降低白子門檻（過渡版本） |
+| v0.1.0-alpha.6 | 2026-03-26 | 棋子偵測改用 Otsu + stdV 主導分類，零硬編碼閾值 |
