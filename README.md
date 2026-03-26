@@ -11,6 +11,7 @@ justmaker 專案的開發決策記錄、可行性評估與架構規劃。
 | [DEC-003](decisions/003-board-recognition-next-phase.md) | 棋盤辨識下階段規劃 | 討論中 | go-board-recognition | 2026-03-26 |
 | [DEC-004](decisions/004-go-solution-integration.md) | go-board-recognition 與 go-solution 整合 | 討論中 | go-board-recognition, go-solution | 2026-03-26 |
 | [DEC-005](decisions/005-testing-and-self-improvement.md) | 辨識測試基礎建設與自我改進 Pipeline | 討論中 | go-board-recognition | 2026-03-26 |
+| [DEC-006](decisions/006-android-claw-feasibility.md) | Android Claw — 手機端 AI Agent 可行性與路線選擇 | 討論中 | (android-claw) | 2026-03-26 |
 
 ## 模板
 
