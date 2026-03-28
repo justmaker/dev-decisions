@@ -1,4 +1,4 @@
-# EnjoyClaw — 系統架構文件
+# AndroidClaw — 系統架構文件
 
 - **日期**: 2026-03-26（初版）/ 2026-03-28（v2 — Open Questions 定案）
 - **狀態**: Draft v2
@@ -10,7 +10,7 @@
 
 | # | Question | 決定 | 備註 |
 |---|----------|------|------|
-| 1 | App 名稱 | **EnjoyClaw** | |
+| 1 | App 名稱 | **AndroidClaw** | |
 | 2 | 上架策略 | **先 GitHub APK** | Google Play 以後再說 |
 | 3 | MCP Gateway | **手機本地** | SSE transport on localhost |
 | 4 | 本地 LLM | **不做** | 純雲端 Provider |
@@ -143,7 +143,7 @@ class ClipboardCapability extends DeviceCapability  // 剪貼簿
 ```
 前景操作 → 正常執行，沒有限制
 短期背景（< 10 min）→ WorkManager (OneTimeWorkRequest)
-持續背景 → Foreground Service + 常駐通知「🦞 EnjoyClaw 運行中」
+持續背景 → Foreground Service + 常駐通知「🦞 AndroidClaw 運行中」
 定期任務 → WorkManager (PeriodicWorkRequest)，最小間隔 15 分鐘
 
 ❌ 不嘗試繞過 Doze mode
